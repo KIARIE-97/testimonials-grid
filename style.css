@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+}
+/* body{
+    height: 100%;
+} */
+.container{
+    /* margin: 50px ; */
+    padding: 90px;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    display: grid;
+    /* grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeannette  patrick patrick kira";
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: #bfdee2;
+    justify-content: center;
+    font-family: Bahnschrift;
+    overflow: auto;
+
+}
+.daniel{
+    grid-area: daniel;
+    background-color: rgb(151, 151, 253);
+    border-radius: 10px;
+    grid-column: span 2;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    color: white;
+
+}
+.jonathan{
+    grid-area: jonathan;
+    background-color: rgb(131, 131, 155);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    /* grid-column: span 2; */
+}
+.jeannette{ 
+    grid-area: jeannette;
+     background-color: rgb(239, 239, 244);
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    /* grid-column: span 2; */
+}
+.patrick{  
+    grid-area: patrick;
+    background-color: rgb(66, 66, 99);
+    border-radius: 10px;
+    grid-column: span 2;
+    padding: 20px;
+    color: white;
+
+}
+.kira{  
+    grid-area: kira;
+    background-color: rgb(225, 225, 235);
+    border-radius: 10px;
+    grid-row: span 2;
+    padding: 20px;
+    color: black;
+    overflow: auto;
+}
+.head_intro{
+    display: flex;
+    flex-wrap: row;
+    justify-content: start;
+    gap: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 20px;
+}
+img{
+    border-radius: 30px;
+    margin: 5px;
+}
+.head_information{
+    grid-column: span 3;
+    padding: 10px;
+}
+.about{
+    grid-column: span 3;
+    padding: 10px;
+}
+.daniel::content(h5){
+    grid-column: span 2;
+}
+.daniel::content(img){
+    grid-column: span 1;
+}
+.attribution{
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 550px){
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "daniel"
+        "jeannette"
+        "jonathan"
+        "kira"
+        "patrick";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 7px;
+    }
+}
+@media (max-width: 1024px) {
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "daniel jeannette"
+        "jeannette patrick"
+        "jonathan kira";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "daniel"
+        "jeannette"
+        "jonathan"
+        "kira"
+        "patrick";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .daniel{
+        grid-column: span 1;
+    }
+    .jeannette{
+        grid-column: span 1;
+    }
+    .jonathan{
+        grid-column: span 1;
+    }
+    .kira{
+        grid-column: span 1;
+    }
+    .patrick{
+        grid-column: span 1;
+    }
+}
