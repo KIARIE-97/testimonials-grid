@@ -27,6 +27,9 @@
 }
 .daniel{
     grid-area: daniel;
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
     background-color: rgb(151, 151, 253);
     border-radius: 10px;
     grid-column: span 2;
